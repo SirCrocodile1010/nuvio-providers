@@ -22,5 +22,29 @@
     "limited": false,
     "disabledPlatforms": [],
     "supportsExternalPlayer": true
+  },
+  {
+    "id": "zstream",
+    "name": "ZStream",
+    "description": "Streams from VidSrc and AutoEmbed",
+    "version": "1.0.0",
+    "author": "SirCrocodile1010",
+    "supportedTypes": [
+      "movie",
+      "tv"
+    ],
+    "filename": "providers/zstream.js",
+    "enabled": true,
+    "logo": "",
+    "contentLanguage": [
+      "en"
+    ],
+    "formats": [
+      "mp4",
+      "mkv"
+    ],
+    "limited": false,
+    "disabledPlatforms": [],
+    "supportsExternalPlayer": true
   }
 ]
