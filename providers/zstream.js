@@ -1,6 +1,6 @@
 /**
  * zstream - Built from src/zstream/
- * Generated: 2026-06-23T04:57:13.940Z
+ * Generated: 2026-06-23T05:05:09.814Z
  */
 var __async = (__this, __arguments, generator) => {
   return new Promise((resolve, reject) => {
