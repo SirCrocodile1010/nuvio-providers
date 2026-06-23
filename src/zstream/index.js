@@ -1,12 +1,1 @@
-async function getStreams(tmdbId, mediaType, season, episode) {
-  const streams = [];
-  try {
-    var url = mediaType === "movie" ? "https://vidsrc.me/embed/movie?tmdb=" + tmdbId : "https://vidsrc.me/embed/tv?tmdb=" + tmdbId + "&season=" + season + "&episode=" + episode;
-    var res = await fetch(url);
-    var html = await res.text();
-    var m = html.match(/file:"([^"]+)"/g) || [];
-    m.forEach(function(s,i){streams.push({name:"ZStream",title:"Stream "+(i+1),url:s.replace('file:"','').replace('"'.''),quality:"HD"});});
-  } catch(e) { console.log(e.message); }
-  return streams;
-}
-module.exports={getStreams};
+async function getStreams(a,b,c,d){var r=[];try{var u=b==="movie"?"https://vidsrc.me/embed/movie?tmdb="+a:"https://vidsrc.me/embed/tv?tmdb="+a+"&season="+c+"&episode="+d;r.push({name:"ZStream",title:"VidSrc HD",url:u,quality:"HD"});}catch(e){}return r;}module.exports={getStreams};
