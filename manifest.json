@@ -1,8 +1,7 @@
 {
   "name": "SirCrocodile1010 Providers",
-  "description": "Custom Nuvio providers",
   "version": "1.0.0",
-  "providers": [
+  "scrapers": [
     {
       "id": "zstream",
       "name": "ZStream",
@@ -21,11 +20,9 @@
       ],
       "formats": [
         "mp4",
-        "mkv"
-      ],
-      "limited": false,
-      "disabledPlatforms": [],
-      "supportsExternalPlayer": true
+        "mkv",
+        "m3u8"
+      ]
     }
   ]
 }
