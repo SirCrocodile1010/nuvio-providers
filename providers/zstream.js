@@ -1,6 +1,6 @@
 /**
  * zstream - Built from src/zstream/
- * Generated: 2026-06-23T08:10:16.889Z
+ * Generated: 2026-06-23T08:19:18.677Z
  */
 var __async = (__this, __arguments, generator) => {
   return new Promise((resolve, reject) => {
@@ -28,9 +28,18 @@ function getStreams(a, b, c, d) {
   return __async(this, null, function* () {
     var r = [];
     try {
-      var u = b === "movie" ? "https://vidsrc.me/embed/movie?tmdb=" + a : "https://vidsrc.me/embed/tv?tmdb=" + a + "&season=" + c + "&episode=" + d;
-      r.push({ name: "ZStream", title: "VidSrc HD", url: u, quality: "HD" });
+      var u = b === "movie" ? "https://vidlink.pro/api/b/movie/" + a : "https://vidlink.pro/api/b/tv/" + a + "/" + c + "/" + d;
+      var h = { "User-Agent": "Mozilla/5.0", "Referer": "https://vidlink.pro/", "Origin": "https://vidlink.pro" };
+      var res = yield fetch(u, { headers: h });
+      var data = yield res.json();
+      if (data && data.stream) {
+        r.push({ name: "ZStream", title: "VidLink HD", url: data.stream, quality: "HD" });
+      }
+      if (data && data.url) {
+        r.push({ name: "ZStream", title: "VidLink HD", url: data.url, quality: "HD" });
+      }
     } catch (e) {
+      console.log(e.message);
     }
     return r;
   });
